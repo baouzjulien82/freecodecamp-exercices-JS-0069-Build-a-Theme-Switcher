@@ -10,8 +10,22 @@ const themes = [
 const menu = document.getElementById('theme-dropdown');
 const button = document.querySelector('button');
 
-// Affichage du menu
+// Gestion de l'affichage du menu
 button.addEventListener('click', () => {
   const isHidden = menu.toggleAttribute('hidden');
   button.setAttribute('aria-expanded', String(!isHidden));
 });
+
+// Masquage du menu depuis document
+document.addEventListener('click', (event) => {
+  if (menu.getAttribute('hidden') !== null) return;
+  // Si le clic vient du bouton ou du menu lui-même, ne rien faire
+  if (button.contains(event.target) || menu.contains(event.target)) return;
+
+  // Sinon, cacher le menu
+  menu.setAttribute('hidden', '');
+  button.setAttribute('aria-expanded', 'false');
+});
+
+
+// Selection des thèmes
