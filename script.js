@@ -1,14 +1,14 @@
 // Tableau des thèmes
 const themes = [
-  {name: 'Light', message: 'Hello sunshine — Light theme is on!'},
-  {name: 'Dark', message: 'The night is yours — Dark theme is on!'},
-  {name: 'Ocean', message: 'Blue skies and high tides — Ocean theme is on!'},
-  {name: 'Nord', message: 'The frost has settled - Nord theme is on!'}
+  {name: 'light', message: 'Hello sunshine — Light theme is on!'},
+  {name: 'dark', message: 'The night is yours — Dark theme is on!'},
+  {name: 'ocean', message: 'Blue skies and high tides — Ocean theme is on!'},
+  {name: 'nord', message: 'The frost has settled - Nord theme is on!'}
 ];
 
 // Définition des variables
 const menu = document.getElementById('theme-dropdown');
-const button = document.querySelector('button');
+const button = document.getElementById('theme-switcher-button');
 const menuItems = document.querySelectorAll('li');
 const textStatus = document.getElementById('status');
 
@@ -34,12 +34,14 @@ document.addEventListener('click', (event) => {
 menuItems.forEach(item => {
   item.addEventListener('click', () => {
     themes.forEach(theme => {
-    if(theme.name === item.textContent) {
+    if (theme.name.toLowerCase() === item.textContent.toLowerCase().trim()) {
       textStatus.textContent = theme.message;
       menu.setAttribute('hidden', '');
       button.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('light', 'dark', 'ocean', 'nord');
-document.body.classList.add(theme.name.toLowerCase());
+      document.body.classList.remove(...themes.map(t => t.name.toLowerCase()));
+document.body.classList.add(`theme-${theme.name}`);
+
+console.log(item.id);
     };
   });
   });
