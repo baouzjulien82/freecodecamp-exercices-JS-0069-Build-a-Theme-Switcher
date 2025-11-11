@@ -10,6 +10,7 @@ const themes = [
 const menu = document.getElementById('theme-dropdown');
 const button = document.querySelector('button');
 const menuItems = document.querySelectorAll('li');
+const textStatus = document.getElementById('status');
 
 // Gestion de l'affichage du menu
 button.addEventListener('click', () => {
@@ -31,5 +32,13 @@ document.addEventListener('click', (event) => {
 
 // Selection des thèmes
 menuItems.forEach(item => {
-  
+  item.addEventListener('click', () => {
+    themes.forEach(theme => {
+    if(theme.name === item.textContent) {
+      textStatus.textContent = theme.message;
+      menu.setAttribute('hidden', '');
+      button.setAttribute('aria-expanded', 'false');
+    }
+  });
+  });
 });
