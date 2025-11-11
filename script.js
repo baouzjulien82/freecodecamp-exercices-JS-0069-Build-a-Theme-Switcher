@@ -9,6 +9,7 @@ const themes = [
 // Définition des variables
 const menu = document.getElementById('theme-dropdown');
 const button = document.querySelector('button');
+const menuItems = document.querySelectorAll('li');
 
 // Gestion de l'affichage du menu
 button.addEventListener('click', () => {
@@ -29,3 +30,6 @@ document.addEventListener('click', (event) => {
 
 
 // Selection des thèmes
+menuItems.forEach(item => {
+  
+});
