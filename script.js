@@ -38,7 +38,7 @@ menuItems.forEach(item => {
       textStatus.textContent = theme.message;
       menu.setAttribute('hidden', '');
       button.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove(...themes.map(t => t.name.toLowerCase()));
+      document.body.classList.remove(...themes.map(t => `theme-${t.name}`));
 document.body.classList.add(`theme-${theme.name}`);
 
 console.log(item.id);
