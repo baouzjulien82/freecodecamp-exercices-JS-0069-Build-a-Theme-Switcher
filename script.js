@@ -38,7 +38,9 @@ menuItems.forEach(item => {
       textStatus.textContent = theme.message;
       menu.setAttribute('hidden', '');
       button.setAttribute('aria-expanded', 'false');
-    }
+      document.body.classList.remove('light', 'dark', 'ocean', 'nord');
+document.body.classList.add(theme.name.toLowerCase());
+    };
   });
   });
 });
