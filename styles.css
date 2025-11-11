@@ -4,22 +4,22 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-.light {
+.theme-light {
 background-color: white;
 color: black;
 }
 
-.dark {
+.theme-dark {
 background-color: black;
 color: white;
 }
 
-.ocean {
+.theme-ocean {
 background-color: #0077be;
 color: #e0f7fa;
 }
 
-.nord {
+.theme-nord {
 background-color: #2e3440;
 color: #d8dee9;
 }
