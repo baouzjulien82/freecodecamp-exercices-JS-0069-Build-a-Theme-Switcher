@@ -29,6 +29,9 @@ ul {
   padding: 0;
   box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.3);
   width: 150px;
+  position: absolute;
+  background-color: white;
+  color: black;
 }
 
 li {
