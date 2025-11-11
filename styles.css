@@ -1,1 +1,32 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
 
+ul {
+  margin: 0;
+  padding: 0;
+  box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 150px;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+li:hover{
+  background-color: rgb(232, 232, 232);
+}
+
+button {
+  padding: 15px 20px;
+  border: none;
+  background-color: #d3b3aa;
+}
+
+#status {
+  text-align: center;
+  min-height: 20px;
+}
