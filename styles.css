@@ -41,12 +41,70 @@ li {
 
 li:hover{
   background-color: rgb(232, 232, 232);
+  cursor: pointer;
 }
 
 button {
   padding: 15px 20px;
   border: none;
   background-color: #d3b3aa;
+  cursor: pointer;
+}
+
+#status {
+  text-align: center;
+  min-height: 20px;
+}body {
+  margin: 0;
+  font-family: sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.theme-light {
+background-color: white;
+color: black;
+}
+
+.theme-dark {
+background-color: black;
+color: white;
+}
+
+.theme-ocean {
+background-color: #0077be;
+color: #e0f7fa;
+}
+
+.theme-nord {
+background-color: #2e3440;
+color: #d8dee9;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 150px;
+  position: absolute;
+  background-color: white;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+li:hover{
+  background-color: rgb(232, 232, 232);
+  cursor: pointer;
+}
+
+button {
+  padding: 15px 20px;
+  border: none;
+  background-color: #d3b3aa;
+  cursor: pointer;
 }
 
 #status {
